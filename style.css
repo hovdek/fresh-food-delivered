@@ -1,0 +1,121 @@
+/* all styling should be made in css */
+/* refrain from having styling decisions within class names */
+/* em is relative to the font size of its parent */
+
+/* #461220 #8C2F39 #508484 #EACDC2 #FFFBFC */
+
+:root {
+    --primary-clr: #461220;
+    --primary2-clr: #8C2F39;
+    --accent-clr: #508484;
+    --accent2-clr: #EACDC2;
+    --bg-clr: #FFFBFC;
+
+    --font-clr: #FFFBFC;
+    --ff-light: 300;
+    --ff-medium: 400;
+    --ff-bold: 700;
+
+    --fs-xs: 0.75rem;
+    --fs-sm: 1rem;
+    --fs-med: 1.5rem;
+    --fs-lg: 2.25rem;
+    --fs-xl: 4rem;
+
+
+}
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+
+/* primary element selectors */
+
+body {
+    background-color: var(--bg-clr);
+    height: 100vh;
+}
+
+/* navigation bar */
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: var(--primary-clr);
+    color: var(--font-clr);
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
+    top: 0;
+}
+
+li {
+    display: inline;
+    float: left;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    padding: 14px 25px;
+    text-decoration: none;
+    font-size: var(--fs-sm);
+    color: var(--font-clr);
+}
+
+li a:visited {
+    color: var(--font-clr);
+}
+
+li a:hover {
+    background-color: var(--primary2-clr);
+}
+
+.active {
+    background-color: var(--primary2-clr);
+    font-weight: var(--ff-bold);
+}
+
+/* content */
+/* background image */
+.home-container {
+    height: 100vh;
+    background-image: url("img/blueberry-cups-homepage.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: block;
+}
+
+img {
+    max-width: 100vw;
+    height: 100%;
+}
+
+/* page content */
+.page-title {
+    grid-area: page-title;
+    font-size: var(--fs-lg);
+    height: 300px;
+    background-color: rgba(80, 132, 132, 0.5);
+    border-radius: 2px;
+
+}
+
+.home-container {
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+
+
+
+/* footer */
+
