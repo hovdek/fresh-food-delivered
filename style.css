@@ -75,7 +75,8 @@ li a:visited {
     color: var(--font-clr);
 }
 
-li a:hover {
+li a:hover,
+li a:focus {
     background-color: var(--primary2-clr);
     transition: 0.2s;
     transform: scale(1.07);
@@ -90,11 +91,26 @@ li a:hover {
 /* background image */
 .home-container {
     height: 100vh;
-    background-image: url("img/blueberry-cups-homepage.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     display: block;
+}
+
+.home-background {
+    background-image: url("img/blueberry-cups-homepage.jpg");
+}
+
+.about-us-background {
+    background-image: url("img/smoothie-surrounded-by-fresh-fruit.jpg");
+}
+
+.packages-background {
+    background-image: url("img/bowls-of-fresh-berries.jpg");
+}
+
+.how-it-works-background {
+    background-image: url("img/burger-topped-with-green-onions.jpg");
 }
 
 img {
@@ -122,10 +138,76 @@ img {
 .home-container {
     display: grid;
     grid-template-columns: 1fr;
-
 }
 
+/* packages */
+.card-background1 {
+    grid-area: card1;
+}
+
+.card-background2 {
+    grid-area: card2;
+}
+
+.card-background3 {
+    grid-area: card3;
+}
+
+.card-holders {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "card1 card2 card3";
+    gap: 10px;
+    margin: auto;
+}
+
+.card {
+    height: 450px;
+    width: 400px;
+}
+
+/* .card-background1 {
+    background-image: url("img/french-toast-with-fresh-fruit.jpg");
+    background-repeat: none;
+}
+
+.card-background2 {
+    background-image: url("img/french-toast-with-fresh-fruit.jpg");
+}
+
+.card-background3 {
+    background-image: url("img/french-toast-with-fresh-fruit.jpg");
+} */
 
 
 /* footer */
 
+.main-footer {
+    width: 100%;
+    background-color: var(--primary-clr);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    color: var(--font-clr);
+    padding: 5px;
+}
+
+.svg-link {
+    position: relative;
+    height: 2em;
+    float: left;
+    left: 25%;
+    align-content: center;
+    margin-top: 7px;
+    margin-left: 10px;
+    transition: 0.2s;
+}
+
+.other-links li {
+    list-style-type: none;
+    position: relative;
+    float: left;
+    left: 50%;
+    margin-left: 10px;
+}
