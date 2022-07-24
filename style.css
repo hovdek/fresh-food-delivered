@@ -161,23 +161,42 @@ img {
     margin: auto;
 }
 
-.card {
+.card,
+.card-background1,
+.card-background2,
+.card-background3 {
     height: 450px;
     width: 400px;
+    background-size: cover;
 }
 
-/* .card-background1 {
-    background-image: url("img/french-toast-with-fresh-fruit.jpg");
-    background-repeat: none;
+.card-background1 {
+    background-image: url("img/sandwiches-on-wooden-board.jpg");
 }
 
 .card-background2 {
-    background-image: url("img/french-toast-with-fresh-fruit.jpg");
+    background-image: url("img/nacho-platter-with-sides.jpg");
 }
 
 .card-background3 {
-    background-image: url("img/french-toast-with-fresh-fruit.jpg");
-} */
+    background-image: url("img/meatball-platter.jpg");
+} 
+
+.hidden {
+    display: none;
+}
+
+/* hover over packages cards to bring up info on each + sign up button */
+.card-background1:hover,
+.card-background2:hover,
+.card-background3:hover {
+    background-color: rbga(0, 0, 0, 0.5);
+}
+
+.hidden:hover {
+    display: block;
+    
+}
 
 
 /* footer */
