@@ -160,6 +160,23 @@ img {
     grid-template-areas: "card1 card2 card3";
     gap: 10px;
     margin: auto;
+    line-height: 1.4;
+    color: var(--font-clr);
+    font-weight: var(--ff-bold);
+}
+
+.card {
+    padding-top: 300px;
+    box-shadow: 2px 2px 5px gray;
+}
+
+.card-button {
+    margin-left: 10px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    background-color: var(--accent-clr);
+    text-decoration: none;
+    color: var(--font-clr);
 }
 
 .card,
@@ -169,6 +186,8 @@ img {
     height: 450px;
     width: 400px;
     background-size: cover;
+    transition: 0.2s;
+
 }
 
 .card-background1 {
@@ -183,22 +202,25 @@ img {
     background-image: url("img/meatball-platter.jpg");
 } 
 
-.hidden {
-    display: none;
-}
-
 /* hover over packages cards to bring up info on each + sign up button */
-.card-background1:hover,
+/* .card-background1:hover,
 .card-background2:hover,
 .card-background3:hover {
     background-color: rbga(0, 0, 0, 0.5);
+    z-index: 2;
+} */
+
+
+
+.card-button:hover {
+    transform: scale(1.06);
+    transition: 0.2s;
 }
 
-.hidden:hover {
-    display: block;
-    
+.card-text {
+    background-color:rgba(0, 0, 0, 0.7);
+    height: 150px;
 }
-
 
 /* footer */
 
@@ -247,7 +269,6 @@ img {
         height: 100%;
     }
 
-
     body {
         background-color: #f3f3f3;
         }
@@ -268,17 +289,34 @@ img {
     }
 }
 
+@media only screen and (min-width: 632px) {
+    .card:hover {
+        transform: scale(1.06);
+        transition: 0.2s;
+    }
 
+    .packages-card {
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
+}
 
  @media handheld, only screen and (max-width: 631px) {
 
     /* home, about us */
     .text-container {
         margin: 5px;
+        max-width: 50ch;
     }
 
     .mobile-overflow {
         overflow: hidden;
+    } 
+
+    .packages-card {
+        margin-top: 20px;
+        margin-bottom: 50px;
     }
 
 
